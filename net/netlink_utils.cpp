@@ -350,7 +350,7 @@ bool NetlinkUtils::ParseWiphyInfoFromPacket(
   }
   std::vector<uint8_t> ext_feature_flags_bytes;
   packet.GetAttributeValue(NL80211_ATTR_EXT_FEATURES,
-                                &ext_feature_flags_bytes)
+                                &ext_feature_flags_bytes);
   *out_wiphy_features = WiphyFeatures(feature_flags,
                                       ext_feature_flags_bytes);
   return true;
